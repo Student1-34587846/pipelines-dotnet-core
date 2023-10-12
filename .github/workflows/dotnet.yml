@@ -1,8 +1,6 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
 name: .NET
-
 on:
   push:
     branches: [ "master" ]
@@ -42,4 +40,6 @@ Available Options:
     # Minimum 1 day. Maximum 90 days unless changed from the repository settings page.
     retention-days: 30 # optional
     - name: Test
+    - run: dotnet test --no-build --verbosity normal
+    
       run: dotnet test --no-build --verbosity normal
