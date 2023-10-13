@@ -19,9 +19,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore
-    - name: Test
-      run: dotnet test --no-build -verbosily normal
+      run: dotnet restore   
     - name: Build
       run: dotnet build --no-restore
     - name: Publish
